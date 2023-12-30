@@ -1,0 +1,262 @@
+.container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 100%; 
+    grid-template-rows: 4% 3% 96% 4%; 
+    grid-template-areas: 
+      "head"
+      "busqueda"
+      "productos"
+      "footer"; 
+}
+
+.head {
+    grid-area: head; 
+    border: 1px solid white;
+    background-color: #D4E2D4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.head h1{
+    font-size: 24px;
+    font-weight: 2;
+    font-family: 'rubik glitch', sans-serif;
+}
+
+.simbolos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 3px;
+    column-gap: 1rem;
+}
+
+.menu{
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+.menu-lista{
+    display: none;
+}
+
+.menu i{
+    margin-top: 30px;
+}
+
+.busqueda { 
+    grid-area: busqueda; 
+    border: 1px solid white;
+    background-color: #4F6F52;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.busqueda-detalle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.busqueda-detalle h2{
+    font-family: teko;
+    font-size: 28px;
+}
+
+.precio select{
+    margin-top: 3%;
+    width: 90%;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.productos { 
+    grid-area: productos; 
+    border: 1px solid white;
+    background-color: #86A789;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reloj{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card{   
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    margin-left: 5%;
+    width: 80%;
+    height: 10%;
+}
+
+.card img{
+    height: 50%;
+    width: 50%;
+}
+
+.card h3{
+    text-align: center;
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: normal;
+    line-height: 29px;
+}
+
+.tarjeta button{
+    width: 50%;
+}
+
+.nav{
+    margin-top: 10%;
+}
+
+.navegador{
+    grid-area: navegador;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlace a{
+    color: black;
+    font-family: 'teko', sans-serif;
+    font-size: 26px;
+}
+
+.enlace a:hover{
+    color: grey;
+}
+
+.boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.boton button{
+    border: 1px solid grey;
+    font-size: 20px;
+}
+
+button{
+    margin-top: 3%;
+    float: left;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #687f68;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+/*escritorio*/
+@media (min-width: 576px){
+    .container {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 17% 83%; 
+        grid-template-rows: 20% 90% 20%; 
+        grid-template-areas: 
+          "head busqueda"
+          "head productos"
+          "footer productos"; 
+    }
+
+    .head {
+        grid-area: head;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 8%;
+    }
+
+    .simbolos{
+        align-items: center;
+        flex-basis: 0%;
+    }
+
+    .menu{
+        justify-content: start;
+        padding-top: 10%;
+    }
+
+    .menu i{
+        display: none;
+    }
+
+    .menu-lista{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2rem;
+    }
+
+    .enlace a{
+        text-decoration: none;
+    }
+
+    .busqueda { 
+        grid-area: busqueda; 
+    }
+
+    .footer { 
+        grid-area: footer;
+        padding-left: 30px;
+    }
+
+    .productos { 
+        grid-area: productos; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reloj{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    
+    }
+    
+    .card{
+        height:20rem;
+        width: 20rem;
+        margin: 5px;
+    }
+}
+
+
